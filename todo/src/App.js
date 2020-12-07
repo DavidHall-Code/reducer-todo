@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useReducer, useState} from 'react'
+import {initialState, reducer} from './reducers/reducers'
+import moment from 'moment'
 
-function App() {
+
+
+
+fuction App() {
+
+  const [state, dispatch] = useReducer(reducer, initialState)
+  const [taskInput, setTaskInput] = useState('')
+
+  const handleChange = e => {
+    setTaskInput(e.target.value)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <div className='App'>
+      <div className='timeShow'>
+        {moment(Date.now()).format('L')}
+      </div>
+      <h1>Things Todo</h1>
+      <h2>Things that need doing!</h2>
 
-export default App;
+      <div className='inputs'>
+        <input
+          type='text'
+          name='addTask'
+          placeholder='Add a Task'
+          value={taskInput}
+          onChange={handleChange}
+          />
+
+      </div>
+
+    </div>
+  )
+}
