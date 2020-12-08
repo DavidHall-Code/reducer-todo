@@ -1,7 +1,7 @@
 import React, { useReducer, useState } from 'react';
 import { initialState, reducer } from './reducers/reducers.js';
 import moment from 'moment'
-
+import './App.css'
 
 function App() {
 

@@ -1,38 +1,83 @@
 .App {
+  margin: auto;
+  overflow-x: hidden;
+  padding: 20px;
   text-align: center;
+  margin-top: 2%;
+  box-shadow: 0 10px 6px -6px #777;
+  background: #8e73ee;
+  color: #ffffff;
+  font-family: sans-serif;
+  width: 70%;
+  border-radius: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.item {
+  font-size: 2.5rem;
+  color: #09FBD3;
+  font-weight: 900;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.item.finished {
+  text-decoration: line-through;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+h1 {
+    font-size: 4rem;
+    color: rgb(247, 233, 112);
+    margin: 0;
+    text-align: left;
 }
 
-.App-link {
-  color: #61dafb;
+h2 {
+  margin: 0;
+  color: #08f7fe;
+  text-align: left;
+  border-bottom: 2px solid #08f7fe;
+  padding-bottom: 1%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.timeHead {
+  color: #F5D300;
+  font-weight: 900;
+  text-align: right;
+  font-size: 1.5rem;
+}
+
+
+body {
+  background: #f4f2fa;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  overflow-x: hidden;
+}
+
+.time {
+color: rgb(241, 241, 241);
+}
+
+.toDoItem {
+margin: 4%;
+}
+
+.inputButtons {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+
+}
+
+.inputButtons input {
+border-radius: 5px;
+font-size: 1.5rem;
+text-align: center;
+margin: 2%;
+}
+
+button {
+font-size: 1.5rem;
+border-radius: 15px;
+margin: 1%;
 }
